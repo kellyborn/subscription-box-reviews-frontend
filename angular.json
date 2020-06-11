@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "subsfrontend"
+    }
+  },
+  "defaultProject": "subsfrontend",
+  "cli": {
+    "analytics": "287c28ff-4198-4341-9c88-20d0e6aa12bc"
+  }
 }
