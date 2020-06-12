@@ -12,4 +12,8 @@ export class SubscriptionService {
   getAllItems(): any {
     return this.http.get(`${this.apiURL}/home`)
   }
+
+  addReview(review: any): any {
+    return this.http.post(`${this.apiURL}/home`, review)
+  }
 }
