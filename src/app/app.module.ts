@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ReviewComponent } from './review/review.component';
 import { FormsModule } from '@angular/forms';
+import { FeatureReviewComponent } from './feature-review/feature-review.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscriptionComponent,
-    ReviewComponent
+    ReviewComponent,
+    FeatureReviewComponent
   ],
   imports: [
     BrowserModule,
