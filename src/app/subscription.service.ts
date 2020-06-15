@@ -13,7 +13,13 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/home`)
   }
 
+  getAllReviews(): any {
+    return this.http.get(`${this.apiURL}/reviews`)
+  }
+
   addReview(review: any): any {
     return this.http.post(`${this.apiURL}/home`, review)
   }
+
+
 }
