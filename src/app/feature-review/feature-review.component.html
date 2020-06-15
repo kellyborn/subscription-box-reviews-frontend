@@ -1,8 +1,7 @@
 <ul>
-    <li *ngFor="let review of reviews">
-        <p>{{review.review_title}}</p>
-        <p>{{review.rating}}</p>
-        <p>{{review.user_cost}}</p>
-        <p>{{review.review}}</p>
+    <li *ngFor="let topReview of topReviews">
+        <p>Subscription Name: {{topReview.name}}</p>
+        <p>Review Title: {{topReview.review_title}}</p>
+        <p>Rating: {{topReview.rating}}</p>
     </li>
 </ul>

@@ -9,12 +9,16 @@ export class SubscriptionService {
   apiURL: string = "http://localhost:3000";
   constructor(private http: HttpClient) { }
 
-  getAllItems(): any {
-    return this.http.get(`${this.apiURL}/home`)
+  getAllSubs(): any {
+    return this.http.get(`${this.apiURL}/subscriptions`)
   }
 
   getAllReviews(): any {
     return this.http.get(`${this.apiURL}/reviews`)
+  }
+
+  getMeatFeaturedReviews(): any {
+    return this.http.get(`${this.apiURL}/meatfeaturedreviews`)
   }
 
   addReview(review: any): any {
