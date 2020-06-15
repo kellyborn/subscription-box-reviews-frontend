@@ -14,6 +14,8 @@ export class FeatureReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMeatFeaturedReviews();
+    this.getVegFeaturedReviews();
+    this.getMealPrepFeaturedReviews();
   }
 
   getMeatFeaturedReviews() {
@@ -28,5 +30,32 @@ export class FeatureReviewComponent implements OnInit {
 
     })
   };
+
+  getVegFeaturedReviews() {
+    this.service.getVegFeaturedReviews().subscribe(response => {
+      let topRating = response[0];
+      response.forEach((review) => {
+        if (review.rating > topRating.rating) {
+          topRating = review;
+        }
+      });
+      this.topReviews.push(topRating);
+
+    })
+  };
+
+  getMealPrepFeaturedReviews() {
+    this.service.getMealPrepFeaturedReviews().subscribe(response => {
+      let topRating = response[0];
+      response.forEach((review) => {
+        if (review.rating > topRating.rating) {
+          topRating = review;
+        }
+      });
+      this.topReviews.push(topRating);
+
+    })
+  };
+
 
 }
