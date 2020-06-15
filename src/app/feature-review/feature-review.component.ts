@@ -18,42 +18,31 @@ export class FeatureReviewComponent implements OnInit {
     this.getMealPrepFeaturedReviews();
   }
 
-  getMeatFeaturedReviews() {
-    this.service.getMeatFeaturedReviews().subscribe(response => {
-      let topRating = response[0];
-      response.forEach((review) => {
-        if (review.rating > topRating.rating) {
-          topRating = review;
-        }
-      });
-      this.topReviews.push(topRating);
+  findTopRating(response) {
+    let topRating = response[0];
+    response.forEach((review) => {
+      if (review.rating > topRating.rating) {
+        topRating = review;
+      }
+    });
+    this.topReviews.push(topRating);
+  }
 
+  getMeatFeaturedReviews() {
+    this.service.getMeatFeaturedReviews().subscribe((response) => {
+      this.findTopRating(response);
     })
   };
 
   getVegFeaturedReviews() {
     this.service.getVegFeaturedReviews().subscribe(response => {
-      let topRating = response[0];
-      response.forEach((review) => {
-        if (review.rating > topRating.rating) {
-          topRating = review;
-        }
-      });
-      this.topReviews.push(topRating);
-
+      this.findTopRating(response);
     })
   };
 
   getMealPrepFeaturedReviews() {
     this.service.getMealPrepFeaturedReviews().subscribe(response => {
-      let topRating = response[0];
-      response.forEach((review) => {
-        if (review.rating > topRating.rating) {
-          topRating = review;
-        }
-      });
-      this.topReviews.push(topRating);
-
+      this.findTopRating(response);
     })
   };
 
