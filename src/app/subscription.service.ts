@@ -13,6 +13,10 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/subscriptions`)
   }
 
+  getMeatSubs(): any {
+    return this.http.get(`${this.apiURL}/meatsubs`)
+  }
+
   getAllReviews(): any {
     return this.http.get(`${this.apiURL}/reviews`)
   }
