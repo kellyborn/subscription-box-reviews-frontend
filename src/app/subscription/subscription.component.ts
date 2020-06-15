@@ -11,11 +11,11 @@ export class SubscriptionComponent implements OnInit {
   constructor(private service: SubscriptionService) { }
 
   ngOnInit(): void {
-    this.getAllItems();
+    this.getAllSubs();
   }
 
-  getAllItems() {
-    this.service.getAllItems().subscribe(response => {
+  getAllSubs() {
+    this.service.getAllSubs().subscribe(response => {
       this.subscriptions = response;
       console.log(this.subscriptions);
     })

@@ -8,18 +8,24 @@ import { SubscriptionService } from '../subscription.service';
 })
 export class FeatureReviewComponent implements OnInit {
 
-  reviews: any[] = [];
+  topReviews: any[] = [];
 
   constructor(private service: SubscriptionService) { }
 
   ngOnInit(): void {
-    this.getAllReviews();
+    this.getMeatFeaturedReviews();
   }
 
-  getAllReviews() {
-    this.service.getAllReviews().subscribe(response => {
-      this.reviews = response;
-      console.log(this.reviews);
+  getMeatFeaturedReviews() {
+    this.service.getMeatFeaturedReviews().subscribe(response => {
+      let topRating = response[0];
+      response.forEach((review) => {
+        if (review.rating > topRating.rating) {
+          topRating = review;
+        }
+      });
+      this.topReviews.push(topRating);
+
     })
   };
 
