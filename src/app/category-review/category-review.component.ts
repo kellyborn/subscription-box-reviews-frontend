@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../subscription.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,39 +11,35 @@ import { SubscriptionService } from '../subscription.service';
 export class CategoryReviewComponent implements OnInit {
   subscriptions: any[] = [];
 
-  constructor(private service: SubscriptionService) { }
+  //active route to subscribe to query parameters
+  constructor(private service: SubscriptionService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getMeatSubs();
-    this.getVegSubs();
-    this.getMealPrepSubs();
+    this.route.queryParams.subscribe(response => {
+      console.log(response);
+      if (response.type === 'meat') {
+        this.getSubscription('meat');
+      } else if (response.type === 'veggies') {
+        this.getSubscription('veg');
+      } else if (response.type === 'mealprep') {
+        this.getSubscription('mealprep');
+      }
+      // stretch add 404 page
+    })
+
     console.log(this.subscriptions);
     console.log("ngOnInit")
   }
 
   //when View Subscription Details BUTTON is clicked we need to go to the details page and show the details of that box
-  showSubscriptionDetails
+  // showSubscriptionDetails
 
-  getMeatSubs() {
-    this.service.getMeatSubs().subscribe(response => {
+  getSubscription(type: string) {
+    this.service.getSubscription(type).subscribe(response => {
       this.subscriptions = response;
       console.log(this.subscriptions);
     })
-  };
-
-  getVegSubs() {
-    this.service.getVegSubs().subscribe(response => {
-      this.subscriptions = response;
-      console.log(this.subscriptions);
-    })
-  };
-
-  getMealPrepSubs() {
-    this.service.getMealPrepSubs().subscribe(response => {
-      this.subscriptions = response;
-      console.log(this.subscriptions);
-    })
-  };
+  }
 
 
 }
