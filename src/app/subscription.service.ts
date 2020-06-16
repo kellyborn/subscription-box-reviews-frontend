@@ -17,6 +17,14 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/meatsubs`)
   }
 
+  getVegSubs(): any {
+    return this.http.get(`${this.apiURL}/vegsubs`)
+  }
+
+  getMealPrepSubs(): any {
+    return this.http.get(`${this.apiURL}/mealprepsubs`)
+  }
+
   getAllReviews(): any {
     return this.http.get(`${this.apiURL}/reviews`)
   }
