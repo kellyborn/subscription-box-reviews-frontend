@@ -41,6 +41,10 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/mealprepfeaturedreviews`)
   }
 
+  getSubscriptionDetails(): any {
+    return this.http.get(`${this.apiURL}/subscriptiondetails`)
+  }
+
   addReview(review: any): any {
     return this.http.post(`${this.apiURL}/home`, review)
   }

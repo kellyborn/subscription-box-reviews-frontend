@@ -8,6 +8,7 @@ import { ReviewComponent } from './review/review.component';
 import { FormsModule } from '@angular/forms';
 import { FeatureReviewComponent } from './feature-review/feature-review.component';
 import { CategoryReviewComponent } from './category-review/category-review.component';
+import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CategoryReviewComponent } from './category-review/category-review.compo
     SubscriptionComponent,
     ReviewComponent,
     FeatureReviewComponent,
-    CategoryReviewComponent
+    CategoryReviewComponent,
+    SubscriptionDetailsComponent
   ],
   imports: [
     BrowserModule,

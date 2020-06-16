@@ -20,6 +20,9 @@ export class CategoryReviewComponent implements OnInit {
     console.log("ngOnInit")
   }
 
+  //when View Subscription Details BUTTON is clicked we need to go to the details page and show the details of that box
+  showSubscriptionDetails
+
   getMeatSubs() {
     this.service.getMeatSubs().subscribe(response => {
       this.subscriptions = response;
