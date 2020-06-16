@@ -22,18 +22,6 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/reviews`)
   }
 
-  getMeatFeaturedReviews(): any {
-    return this.http.get(`${this.apiURL}/meatfeaturedreviews`)
-  }
-
-  getVegFeaturedReviews(): any {
-    return this.http.get(`${this.apiURL}/vegfeaturedreviews`)
-  }
-
-  getMealPrepFeaturedReviews(): any {
-    return this.http.get(`${this.apiURL}/mealprepfeaturedreviews`)
-  }
-
   getSubscriptionDetails(): any {
     return this.http.get(`${this.apiURL}/subscriptiondetails`)
   }

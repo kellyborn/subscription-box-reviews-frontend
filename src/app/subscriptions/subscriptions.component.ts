@@ -4,11 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-category-review',
-  templateUrl: './category-review.component.html',
-  styleUrls: ['./category-review.component.css']
+  selector: 'app-subscriptions',
+  templateUrl: './subscriptions.component.html',
+  styleUrls: ['./subscriptions.component.css']
 })
-export class CategoryReviewComponent implements OnInit {
+export class SubscriptionsComponent implements OnInit {
   subscriptions: any[] = [];
 
   //active route to subscribe to query parameters
