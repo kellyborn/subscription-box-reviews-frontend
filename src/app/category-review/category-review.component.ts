@@ -14,10 +14,28 @@ export class CategoryReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMeatSubs();
+    this.getVegSubs();
+    this.getMealPrepSubs();
+    console.log(this.subscriptions);
+    console.log("ngOnInit")
   }
 
   getMeatSubs() {
     this.service.getMeatSubs().subscribe(response => {
+      this.subscriptions = response;
+      console.log(this.subscriptions);
+    })
+  };
+
+  getVegSubs() {
+    this.service.getVegSubs().subscribe(response => {
+      this.subscriptions = response;
+      console.log(this.subscriptions);
+    })
+  };
+
+  getMealPrepSubs() {
+    this.service.getMealPrepSubs().subscribe(response => {
       this.subscriptions = response;
       console.log(this.subscriptions);
     })

@@ -31,6 +31,7 @@ export class FeatureReviewComponent implements OnInit {
   getMeatFeaturedReviews() {
     this.service.getMeatFeaturedReviews().subscribe((response) => {
       this.findTopRating(response);
+
     })
   };
 
