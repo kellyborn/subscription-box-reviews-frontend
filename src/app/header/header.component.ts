@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   route(where: string) {
-    this.router.navigate(["/category-review"], { queryParams: { type: where } })
+    this.router.navigate(["/subscriptions"], { queryParams: { type: where } })
   }
 
 }

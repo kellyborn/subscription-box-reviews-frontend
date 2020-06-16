@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ReviewComponent } from './review/review.component';
 import { FormsModule } from '@angular/forms';
 import { FeatureReviewComponent } from './feature-review/feature-review.component';
-import { CategoryReviewComponent } from './category-review/category-review.component';
+import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -16,7 +16,7 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     ReviewComponent,
     FeatureReviewComponent,
-    CategoryReviewComponent,
+    SubscriptionsComponent,
     SubscriptionDetailsComponent,
     HeaderComponent
   ],
