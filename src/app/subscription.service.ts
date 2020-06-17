@@ -22,8 +22,8 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/reviews`)
   }
 
-  getSubscriptionDetails(): any {
-    return this.http.get(`${this.apiURL}/subscriptiondetails`)
+  getSubscriptionDetails(id: any): any {
+    return this.http.get(`${this.apiURL}/subscriptiondetails`, { params: { id: id } })
   }
 
   addReview(review: any): any {
@@ -32,3 +32,4 @@ export class SubscriptionService {
 
 
 }
+

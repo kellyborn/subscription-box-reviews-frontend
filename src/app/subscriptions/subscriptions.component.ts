@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../subscription.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class SubscriptionsComponent implements OnInit {
   subscriptions: any[] = [];
 
   //active route to subscribe to query parameters
-  constructor(private service: SubscriptionService, private route: ActivatedRoute) { }
+  constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
@@ -23,6 +23,8 @@ export class SubscriptionsComponent implements OnInit {
         this.getSubscription('veg');
       } else if (response.type === 'mealprep') {
         this.getSubscription('mealprep');
+      } else {
+        //ALL SUBS
       }
       // stretch add 404 page
     })
@@ -32,7 +34,10 @@ export class SubscriptionsComponent implements OnInit {
   }
 
   //when View Subscription Details BUTTON is clicked we need to go to the details page and show the details of that box
-  // showSubscriptionDetails
+  routeDetails(id: number) {
+    console.log(id);
+    this.router.navigate(["/subdetails"], { queryParams: { id: id } })
+  }
 
   getSubscription(type: string) {
     this.service.getSubscription(type).subscribe(response => {
