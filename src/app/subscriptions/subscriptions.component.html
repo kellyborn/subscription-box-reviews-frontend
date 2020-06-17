@@ -1,3 +1,7 @@
+<!-- <h1>Needs Refactor</h1> -->
+<h2 *ngIf="subscriptions[0].sub_type === 'meat'">Meat Subscriptions</h2>
+<h2 *ngIf="subscriptions[0].sub_type === 'veg'">Veggie Subscriptions</h2>
+<h2 *ngIf="subscriptions[0].sub_type === 'mealprep'">Meal Prep Subscriptions</h2>
 <ul>
     <li *ngFor="let subscription of subscriptions, index as i">
         <p>Subscription: {{subscription.name}}</p>
