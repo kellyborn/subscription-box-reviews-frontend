@@ -1,12 +1,12 @@
 <ul>
     <li>
-        <p>Subscription Name: </p>
-        <p>Average Rating: </p>
-        <p>Subscription Description: </p>
-        <p>Cost: </p>
+        <p>Subscription Name: {{subscriptionDetails[0]?.name}}</p>
+        <p>Average Rating: {{subscriptionDetails[0]?.rating}}</p>
+        <p>Subscription Description: {{subscriptionDetails[0]?.description}}</p>
+        <p>Cost: {{subscriptionDetails[0]?.user_cost}}</p>
         <!-- use feature review component here?  -->
-        <p>Featured Review Title: </p>
-        <p>Featured Review Rating: </p>
-        <p>Feature Review Description: </p>
+        <p>Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
+        <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
+        <p>Feature Review Description: {{subscriptionDetails[0]?.review}}</p>
     </li>
 </ul>
