@@ -22,6 +22,7 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/reviews`)
   }
 
+  // used for sub details and "all reviews for a subscription"
   getSubscriptionDetails(id: any): any {
     return this.http.get(`${this.apiURL}/subscriptiondetails`, { params: { id: id } })
   }

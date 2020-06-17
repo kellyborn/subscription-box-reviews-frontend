@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../subscription.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-subscription-details',
@@ -11,7 +11,7 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   subscriptionDetails: any[] = [];
 
-  constructor(private service: SubscriptionService, private route: ActivatedRoute) { }
+  constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
@@ -26,5 +26,11 @@ export class SubscriptionDetailsComponent implements OnInit {
       console.log(this.subscriptionDetails);
     })
   };
+
+
+  routeReviews(id: number) {
+    console.log(id);
+    this.router.navigate(["/subscription-reviews"], { queryParams: { id: id } })
+  }
 
 }
