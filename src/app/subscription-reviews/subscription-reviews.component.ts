@@ -11,7 +11,7 @@ export class SubscriptionReviewsComponent implements OnInit {
 
   subscriptionReviews: any[] = [];
 
-  constructor(private service: SubscriptionService, private route: ActivatedRoute) { }
+  constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
@@ -27,4 +27,8 @@ export class SubscriptionReviewsComponent implements OnInit {
     })
   };
 
+  routeWriteReviews(id: number) {
+    console.log(id);
+    this.router.navigate(["/write-reviews"], { queryParams: { id: id } })
+  }
 }

@@ -3,5 +3,7 @@
         <p>Review Title: {{subscriptionReview?.review_title}}</p>
         <p>Rating: {{subscriptionReview?.rating}}</p>
         <p>Review Description: {{subscriptionReview?.review}}</p>
+
     </li>
 </ul>
+<button (click)="routeWriteReviews(subscriptionReviews[0].sub_id)">Write a Review</button>

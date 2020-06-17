@@ -9,5 +9,6 @@
         <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
         <p>Feature Review Description: {{subscriptionDetails[0]?.review}}</p>
         <button (click)="routeReviews(subscriptionDetails[0].sub_id)">View All Reviews</button>
+        <button (click)="routeWriteReviews(subscriptionDetails[0].sub_id)">Write a Review</button>
     </li>
 </ul>
