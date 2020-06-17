@@ -9,6 +9,7 @@ import { FeatureReviewComponent } from './feature-review/feature-review.componen
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { HeaderComponent } from './header/header.component';
+import { SubscriptionReviewsComponent } from './subscription-reviews/subscription-reviews.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     FeatureReviewComponent,
     SubscriptionsComponent,
     SubscriptionDetailsComponent,
-    HeaderComponent
+    HeaderComponent,
+    SubscriptionReviewsComponent
   ],
   imports: [
     BrowserModule,
