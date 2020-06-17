@@ -28,6 +28,8 @@ export class SubscriptionService {
   }
 
   addReview(review: any): any {
+    console.log("service adding review")
+    console.log(review)
     return this.http.post(`${this.apiURL}/home`, review)
   }
 

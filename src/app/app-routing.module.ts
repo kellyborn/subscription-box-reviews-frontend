@@ -4,6 +4,7 @@ import { FeatureReviewComponent } from './feature-review/feature-review.componen
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { SubscriptionReviewsComponent } from './subscription-reviews/subscription-reviews.component';
+import { ReviewComponent } from './review/review.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: "subscriptions", component: SubscriptionsComponent },
   { path: "subdetails", component: SubscriptionDetailsComponent },
   { path: "subscription-reviews", component: SubscriptionReviewsComponent },
+  { path: "write-reviews", component: ReviewComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", redirectTo: "/home", pathMatch: "full" }
 ];

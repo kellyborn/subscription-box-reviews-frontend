@@ -33,4 +33,9 @@ export class SubscriptionDetailsComponent implements OnInit {
     this.router.navigate(["/subscription-reviews"], { queryParams: { id: id } })
   }
 
+  routeWriteReviews(id: number) {
+    console.log(id);
+    this.router.navigate(["/write-reviews"], { queryParams: { id: id } })
+  }
+
 }
