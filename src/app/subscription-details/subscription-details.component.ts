@@ -10,23 +10,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SubscriptionDetailsComponent implements OnInit {
 
   subscriptionDetails: any[] = [];
+  averageCost: any;
 
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      console.log(response);
       this.getSubscriptionDetails(response.id);
+      this.getSubscriptionDetailsAvg(response.id);
     })
   }
 
   getSubscriptionDetails(id: any) {
     this.service.getSubscriptionDetails(id).subscribe(response => {
       this.subscriptionDetails = response;
-      console.log(this.subscriptionDetails);
     })
   };
 
+  getSubscriptionDetailsAvg(id: any) {
+    this.service.getSubscriptionDetailsAvg(id).subscribe(response => {
+      console.log(response)
+      this.averageCost = Number(response);
+      console.log(this.averageCost)
+    })
+  };
 
   routeReviews(id: number) {
     console.log(id);

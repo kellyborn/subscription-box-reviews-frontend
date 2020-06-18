@@ -16,17 +16,13 @@ export class ReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      console.log("response below")
-      console.log(response);
       this.id = response.id;
-      console.log(this.id)
     })
   }
 
   addReview(form: NgForm): void {
     let newReview = form.value;
     newReview.subscription_id = this.id;
-    console.log(newReview);
     this.service.addReview(newReview).subscribe(() => {
       form.reset();
     })
