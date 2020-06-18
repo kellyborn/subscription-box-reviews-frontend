@@ -18,6 +18,10 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/subscription`, { params: { type: type } })
   }
 
+  getFeatureReview(type: string): any {
+    return this.http.get(`${this.apiURL}/featurereview`, { params: { type: type } })
+  }
+
   getAllReviews(): any {
     return this.http.get(`${this.apiURL}/reviews`)
   }
