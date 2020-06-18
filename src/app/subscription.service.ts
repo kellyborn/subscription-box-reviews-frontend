@@ -27,6 +27,11 @@ export class SubscriptionService {
     return this.http.get(`${this.apiURL}/subscriptiondetails`, { params: { id: id } })
   }
 
+  //used to get AVG user_cost for Sub Details component
+  getSubscriptionDetailsAvg(id: any): any {
+    return this.http.get(`${this.apiURL}/subscriptiondetailsavg`, { params: { id: id } })
+  }
+
   addReview(review: any): any {
     console.log("service adding review")
     console.log(review)
