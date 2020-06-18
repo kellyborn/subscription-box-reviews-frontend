@@ -15,6 +15,7 @@ export class SubscriptionsComponent implements OnInit {
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllSubs();
     this.route.queryParams.subscribe(response => {
       console.log(response);
       if (response.type === 'meat') {
@@ -23,8 +24,6 @@ export class SubscriptionsComponent implements OnInit {
         this.getSubscription('veg');
       } else if (response.type === 'mealprep') {
         this.getSubscription('mealprep');
-      } else {
-        //ALL SUBS
       }
       // stretch add 404 page
     })
@@ -41,6 +40,13 @@ export class SubscriptionsComponent implements OnInit {
 
   getSubscription(type: string) {
     this.service.getSubscription(type).subscribe(response => {
+      this.subscriptions = response;
+      console.log(this.subscriptions);
+    })
+  }
+
+  getAllSubs() {
+    this.service.getAllSubs().subscribe(response => {
       this.subscriptions = response;
       console.log(this.subscriptions);
     })

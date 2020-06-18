@@ -29,8 +29,8 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   getSubscriptionDetailsAvg(id: any) {
     this.service.getSubscriptionDetailsAvg(id).subscribe(response => {
-      console.log(response)
-      this.averageCost = Number(response);
+      console.log(response[0].avg)
+      this.averageCost = Number(response[0].avg);
       console.log(this.averageCost)
     })
   };
