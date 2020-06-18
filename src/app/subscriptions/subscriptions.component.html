@@ -6,9 +6,7 @@
 <ul>
     <li *ngFor="let subscription of subscriptions, index as i">
         <p>Subscription: {{subscription.name}}</p>
-        <p>Rating: {{subscription.rating}}</p>
-        <p>Review: {{subscription.review_title}}</p>
-        <p>{{subscription.review}}</p>
+        <p>Subscription Description: {{subscription.description}}</p>
         <button (click)="routeDetails(subscription.sub_id)">View Subscription Details</button>
     </li>
 </ul>

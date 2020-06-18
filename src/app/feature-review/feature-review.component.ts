@@ -31,7 +31,7 @@ export class FeatureReviewComponent implements OnInit {
   };
 
   getFeaturedReviews(type: string) {
-    this.service.getSubscription(type).subscribe((response) => {
+    this.service.getFeatureReview(type).subscribe((response) => {
       this.findTopRating(response);
     });
   };
