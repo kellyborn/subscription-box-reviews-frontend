@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* GLOBAL RESETS */
-body{
+body, h1, h2, h3 {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -24,12 +24,12 @@ h3{
 }
 
 
-p {
+p, label {
     color: #323333;
     font-size: 1rem;
 }
 
-.review-header {
+.bold-heading {
     font-weight: 600;
 }
 
