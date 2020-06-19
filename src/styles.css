@@ -7,6 +7,32 @@ body{
 
 }
 
+h1 {
+    font-size: 2.25rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #323333;
+}
+
+h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #323333;
+}
+
+
+p {
+    color: #323333;
+    font-size: 1rem;
+}
+
+.review-header {
+    font-weight: 600;
+}
+
 ul{
     list-style: none;
     padding: 0;
@@ -15,7 +41,23 @@ ul{
 button{
     font-family: inherit;
     width: 100%;
+    background: #880AAC;
+    border: 1px solid #880AAC;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    height: 44px;
 }
+
+.secondary {
+    background: #FFFFFF;
+    border: 1px solid #880AAC;
+    color: #880AAC;
+    text-align: center;
+}
+
 
 .box{
     background: #FFFFFF;
@@ -23,4 +65,10 @@ button{
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
+}
+
+.fa-star {
+    color: #F2D223;
+    font-size: 2rem;
+    padding: 8px;
 }

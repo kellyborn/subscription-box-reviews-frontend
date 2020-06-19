@@ -4,19 +4,4 @@
     object-fit: cover;
 }
 
-.fa-star {
-    color: #F2D223;
-    font-size: 2rem;
-    padding: 8px;
-}
 
-.secondary {
-    background: #FFFFFF;
-    border: 1px solid #880AAC;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #880AAC;
-    letter-spacing: 0;
-    text-align: center;
-    height: 44px;
-}
