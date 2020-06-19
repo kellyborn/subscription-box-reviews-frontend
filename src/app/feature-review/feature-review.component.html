@@ -7,10 +7,20 @@
     <h1 class="featured-heading">Featured Reviews</h1>
     <ul>
         <li *ngFor="let topReview of topReviews" class="featured box">
-            <h2>Featured {{topReview.sub_type}} Review</h2>
-            <p>Subscription Name: {{topReview?.name}}</p>
-            <p>Review Title: {{topReview?.review_title}}</p>
+            <!-- Add logo -->
+            <!-- hook up star functionality -->
+            <div class="stars">
+                <i class="fas fa-star small"></i>
+                <i class="fas fa-star small"></i>
+                <i class="fas fa-star small"></i>
+                <i class="fas fa-star small"></i>
+                <i class="fas fa-star small"></i>
+            </div>
             <p>Rating: {{topReview?.rating}}</p>
+            <p class="review-header">{{topReview?.name}}</p>
+            <p>{{topReview?.review_title}}</p>
+            <p>{{topReview?.review}}</p>
+
         </li>
     </ul>
 </div>
