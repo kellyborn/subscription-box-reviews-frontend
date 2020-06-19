@@ -9,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  isShow = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.toggleDisplay();
+  }
+
+  toggleDisplay() {
+    this.isShow = !this.isShow;
   }
 
   route(where: string) {
