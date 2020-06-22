@@ -6,6 +6,7 @@ font-weight: 400;
 color: #FFFFFF;
 letter-spacing: 0;
 height: 44px;
+width: 100%;
 }
 
 .about{
@@ -26,5 +27,23 @@ height: 44px;
 .featured-heading{
     font-size: 23px;
     font-weight: 600;
+}
+
+@media only screen and (min-width: 768px){
+
+.discover-button{
+width: auto;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
 }
 

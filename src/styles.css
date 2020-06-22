@@ -29,6 +29,10 @@ p, label {
     font-size: 1rem;
 }
 
+a{
+    text-decoration: none;
+}
+
 .bold-heading {
     font-weight: 600;
 }
@@ -40,7 +44,6 @@ ul{
 
 button{
     font-family: inherit;
-    width: 100%;
     background: #880AAC;
     border: 1px solid #880AAC;
     border-radius: 4px;
@@ -71,4 +74,13 @@ button{
     color: #F2D223;
     font-size: 2rem;
     padding: 8px;
+}
+
+@media only screen and (min-width: 768px){}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }

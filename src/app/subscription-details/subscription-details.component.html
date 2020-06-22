@@ -24,10 +24,13 @@
                 <i class="fas fa-star"></i>
             </div>
             <!-- hook logic for rating to stars -->
-            <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
-            <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
-            <p>{{subscriptionDetails[0]?.review}}</p>
-            <button class="secondary" (click)="routeReviews(subscriptionDetails[0].sub_id)">View All Reviews</button>
+            <div>
+                <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
+                <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
+                <p>{{subscriptionDetails[0]?.review}}</p>
+                <button class="secondary" (click)="routeReviews(subscriptionDetails[0].sub_id)">View All
+                    Reviews</button>
+            </div>
         </div>
     </li>
 </ul>
