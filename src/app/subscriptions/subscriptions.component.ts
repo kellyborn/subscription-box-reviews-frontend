@@ -69,13 +69,4 @@ export class SubscriptionsComponent implements OnInit {
     })
   }
 
-  getAvgRating(id: any) {
-    this.service.getSubscriptionRatingAvg(id).subscribe(response => {
-      // this.ratings = (response[0].round);
-      // console.log("Ave rating response")
-      // console.log(this.ratings)
-    })
-  }
-
-
 }
