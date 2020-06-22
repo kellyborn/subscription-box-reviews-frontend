@@ -11,6 +11,7 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   subscriptionDetails: any[] = [];
   averageCost: any;
+  rating: number = 3;
 
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 

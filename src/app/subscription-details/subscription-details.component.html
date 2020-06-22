@@ -4,11 +4,9 @@
         <h3>{{subscriptionDetails[0]?.name}}</h3>
         <!-- hook up stars with rating logic -->
         <div class="stars">
-            <i class="fas fa-star small"></i>
-            <i class="fas fa-star small"></i>
-            <i class="fas fa-star small"></i>
-            <i class="fas fa-star small"></i>
-            <i class="fas fa-star small"></i>
+            <!-- this still nees a route to a SQL http request -->
+            <i *ngFor="let star of [].constructor(rating)" class="fas fa-star small"></i>
+            <i *ngFor="let star of [].constructor(5 - rating)" class="far fa-star small"></i>
         </div>
         <p>{{subscriptionDetails[0]?.description}}</p>
         <p>Average Cost: {{averageCost | currency}} </p>
