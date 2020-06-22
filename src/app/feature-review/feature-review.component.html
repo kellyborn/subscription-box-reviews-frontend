@@ -10,11 +10,12 @@
             <!-- Add logo -->
             <!-- hook up star functionality -->
             <div class="stars">
+                <i *ngFor="let star of [].constructor(topReview.rating)" class="fas fa-star small"></i>
+                <i *ngFor="let star of [].constructor(5 - topReview.rating)" class="far fa-star small"></i>
+                <!-- <i class="fas fa-star small"></i>
                 <i class="fas fa-star small"></i>
                 <i class="fas fa-star small"></i>
-                <i class="fas fa-star small"></i>
-                <i class="fas fa-star small"></i>
-                <i class="fas fa-star small"></i>
+                <i class="fas fa-star small"></i> -->
             </div>
             <p>Rating: {{topReview?.rating}}</p>
             <p class="review-header">{{topReview?.name}}</p>
