@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SubscriptionsComponent implements OnInit {
   subscriptions: any[] = [];
+  ratings: any[] = [];
 
   //active route to subscribe to query parameters
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
@@ -39,16 +40,40 @@ export class SubscriptionsComponent implements OnInit {
   }
 
   getSubscription(type: string) {
+    this.subscriptions = [];
     this.service.getSubscription(type).subscribe(response => {
-      this.subscriptions = response;
-      console.log(this.subscriptions);
+      // console.log(this.subscriptions);
+      // console.log(response)
+      response.forEach((item) => {
+        this.service.getSubscriptionRatingAvg(item.sub_id).subscribe(response2 => {
+
+          let ratingObj = item
+          console.log(response2);
+          if (response2[0].round !== undefined) {
+            ratingObj.rating = Number(response2[0].round);
+          }
+          console.log(ratingObj);
+          this.subscriptions.push(ratingObj);
+        });
+      })
     })
   }
+
+
 
   getAllSubs() {
     this.service.getAllSubs().subscribe(response => {
       this.subscriptions = response;
-      console.log(this.subscriptions);
+      console.log(response);
+      console.log("this is the response for all subs")
+    })
+  }
+
+  getAvgRating(id: any) {
+    this.service.getSubscriptionRatingAvg(id).subscribe(response => {
+      // this.ratings = (response[0].round);
+      // console.log("Ave rating response")
+      // console.log(this.ratings)
     })
   }
 

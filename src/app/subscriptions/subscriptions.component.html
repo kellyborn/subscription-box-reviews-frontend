@@ -8,11 +8,8 @@
         <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
             <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
             <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i *ngFor="let star of [].constructor(subscription.rating)" class="fas fa-star small"></i>
+                <i *ngFor="let star of [].constructor(5 - subscription.rating)" class="far fa-star small"></i>
             </div>
             <p>Subscription: {{subscription.name}}</p>
             <p>Subscription Description: {{subscription.description}}</p>
