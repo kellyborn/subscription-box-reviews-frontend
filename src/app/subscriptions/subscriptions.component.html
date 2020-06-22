@@ -1,21 +1,22 @@
 <!-- <h1>Needs Refactor</h1> -->
 <!-- <h2 *ngIf="!subscriptions[0]?.sub_type">All Subscriptions</h2> -->
-<h2 *ngIf="subscriptions[0]?.sub_type === 'meat'">Meat Subscriptions</h2>
-<h2 *ngIf="subscriptions[0]?.sub_type === 'veg'">Veggie Subscriptions</h2>
-<h2 *ngIf="subscriptions[0]?.sub_type === 'mealprep'">Meal Prep Subscriptions</h2>
-<ul>
-    <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
-        <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
-
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Subscription: {{subscription.name}}</p>
-        <p>Subscription Description: {{subscription.description}}</p>
-        <button class="secondary" (click)="routeDetails(subscription.sub_id)">View Subscription Details</button>
-    </li>
-</ul>
+<div class="container">
+    <h2 *ngIf="subscriptions[0]?.sub_type === 'meat'">Meat Subscriptions</h2>
+    <h2 *ngIf="subscriptions[0]?.sub_type === 'veg'">Veggie Subscriptions</h2>
+    <h2 *ngIf="subscriptions[0]?.sub_type === 'mealprep'">Meal Prep Subscriptions</h2>
+    <ul class="sub-boxes">
+        <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
+            <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Subscription: {{subscription.name}}</p>
+            <p>Subscription Description: {{subscription.description}}</p>
+            <button class="secondary" (click)="routeDetails(subscription.sub_id)">View Subscription Details</button>
+        </li>
+    </ul>
+</div>

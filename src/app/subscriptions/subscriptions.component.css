@@ -4,4 +4,16 @@
     object-fit: cover;
 }
 
+@media only screen and (min-width: 768px){
 
+    .sub-boxes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subscription{
+        max-width: 300px;
+    }
+
+}
