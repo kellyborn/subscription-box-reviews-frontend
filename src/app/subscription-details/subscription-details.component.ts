@@ -11,7 +11,7 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   subscriptionDetails: any[] = [];
   averageCost: any;
-  rating: number = 3;
+  rating: number;
 
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
@@ -19,6 +19,15 @@ export class SubscriptionDetailsComponent implements OnInit {
     this.route.queryParams.subscribe(response => {
       this.getSubscriptionDetails(response.id);
       this.getSubscriptionDetailsAvg(response.id);
+      this.getAvgRating(response.id)
+    })
+  }
+
+  getAvgRating(id: any) {
+    this.service.getSubscriptionRatingAvg(id).subscribe(response => {
+      this.rating = Number(response[0].round);
+      console.log("what is the response?????")
+      console.log(this.rating)
     })
   }
 
