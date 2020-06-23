@@ -40,8 +40,13 @@ width: auto;
     flex-direction: row;
 }
 
+.about-heading {
+    font-size: 3.125rem;
+}
 
-
+.subhead {
+    font-size: 1.875rem;
+}
 
 
 

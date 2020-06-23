@@ -1,27 +1,29 @@
-<div class="about">
-    <h1 class="about-heading">Discover. Subscribe. Review.</h1>
-    <p class="subhead">Find home delivery subscriptions that fit your needs!</p>
-    <button class="discover-button">Discover Subscriptions</button>
-</div>
-<div class="featured-reviews">
-    <h1 class="featured-heading">Featured Reviews</h1>
-    <ul class="reviews">
-        <li *ngFor="let topReview of topReviews" class="featured box">
-            <!-- Add logo -->
-            <!-- hook up star functionality -->
-            <div class="stars">
-                <i *ngFor="let star of [].constructor(topReview.rating)" class="fas fa-star small"></i>
-                <i *ngFor="let star of [].constructor(5 - topReview.rating)" class="far fa-star small"></i>
-                <!-- <i class="fas fa-star small"></i>
+<div class="container">
+    <div class="about">
+        <h1 class="about-heading">Discover. Subscribe. Review.</h1>
+        <p class="subhead">Find home delivery subscriptions that fit your needs!</p>
+        <button class="discover-button">Discover Subscriptions</button>
+    </div>
+    <div class="featured-reviews">
+        <h1 class="featured-heading">Featured Reviews</h1>
+        <ul class="reviews">
+            <li *ngFor="let topReview of topReviews" class="featured box">
+                <!-- Add logo -->
+                <!-- hook up star functionality -->
+                <div class="stars">
+                    <i *ngFor="let star of [].constructor(topReview.rating)" class="fas fa-star small"></i>
+                    <i *ngFor="let star of [].constructor(5 - topReview.rating)" class="far fa-star small"></i>
+                    <!-- <i class="fas fa-star small"></i>
                 <i class="fas fa-star small"></i>
                 <i class="fas fa-star small"></i>
                 <i class="fas fa-star small"></i> -->
-            </div>
-            <p>Rating: {{topReview?.rating}}</p>
-            <p class="review-header">{{topReview?.name}}</p>
-            <p>{{topReview?.review_title}}</p>
-            <p>{{topReview?.review}}</p>
+                </div>
+                <p>Rating: {{topReview?.rating}}</p>
+                <p class="review-header">{{topReview?.name}}</p>
+                <p>{{topReview?.review_title}}</p>
+                <p>{{topReview?.review}}</p>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 </div>
