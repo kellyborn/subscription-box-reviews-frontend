@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubscriptionService {
 
-  apiURL: string = "http://localhost:3000";
+  private readonly apiURL = environment.apiBaseUrl;
   constructor(private http: HttpClient) { }
 
   getAllSubs(): any {
