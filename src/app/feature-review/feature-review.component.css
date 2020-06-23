@@ -10,7 +10,7 @@ width: 100%;
 }
 
 .about{
-    margin: 20px;
+    margin: 20px 20px 100px 20px;
 }
 
 .about-heading{
@@ -27,6 +27,12 @@ width: 100%;
 .featured-heading{
     font-size: 23px;
     font-weight: 600;
+    margin-left: 20px;
+}
+
+.pear {
+    position: absolute;
+    z-index: 1;
 }
 
 @media only screen and (min-width: 768px){
