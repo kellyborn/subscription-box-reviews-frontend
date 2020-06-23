@@ -1,10 +1,21 @@
-<h1>All Reviews</h1>
-<ul>
-    <li *ngFor="let subscriptionReview of subscriptionReviews">
-        <p>Review Title: {{subscriptionReview?.review_title}}</p>
-        <p>Rating: {{subscriptionReview?.rating}}</p>
-        <p>Review Description: {{subscriptionReview?.review}}</p>
+<div class="container">
+    <h2>All Reviews</h2>
+    <div class="review-container">
+        <ul class="review-list">
+            <li class="review box" *ngFor="let subscriptionReview of subscriptionReviews">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="bold-heading">{{subscriptionReview?.review_title}}</p>
+                <p>{{subscriptionReview?.review}}</p>
+            </li>
+        </ul>
+        <button class="write-button" (click)="routeWriteReviews(subscriptionReviews[0].sub_id)">Write a Review</button>
+    </div>
 
-    </li>
-</ul>
-<button (click)="routeWriteReviews(subscriptionReviews[0].sub_id)">Write a Review</button>
+
+</div>
