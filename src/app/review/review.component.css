@@ -21,9 +21,9 @@ input {
     border: 1px solid #880AAC;
     border-radius: 4px;
     margin-bottom: 30px;
-    height: 44px;
     font-size: 1rem;
     color: #323333;
+    padding: 16px;
 }
 
 input:focus{
@@ -51,17 +51,20 @@ select{
     padding:8px;
     font-size: 1rem;
     color: #323333;
-    height: 44px;
     margin-bottom: 30px;
     border-radius:4px;
     background: #FDF5FF;
     outline:none;
     border: 1px solid #880AAC;
+    padding: 16px;
 }
 
 @media only screen and (min-width: 768px){
 
-
+.left {
+    margin: unset;
+    padding-bottom: 20px;
+}
 
 
 
