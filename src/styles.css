@@ -52,6 +52,7 @@ button{
     color: #FFFFFF;
     letter-spacing: 1px;
     height: 44px;
+    width: 100%;
 }
 
 .secondary {
@@ -76,11 +77,25 @@ button{
     padding: 8px;
 }
 
-@media only screen and (min-width: 768px){}
+@media only screen and (min-width: 768px){
 
 .container{
     display: flex;
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.card{
+    width: 100%
+}
+
+h2{
+    margin-left: 40px;
+}
+
+button{
+width: unset;
+}
+
 }
