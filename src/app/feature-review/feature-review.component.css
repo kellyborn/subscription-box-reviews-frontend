@@ -1,3 +1,4 @@
+
 .discover-button{
 background: #880AAC;
 border-radius: 4px;
@@ -10,7 +11,7 @@ width: 100%;
 }
 
 .about{
-    margin: 20px 20px 100px 20px;
+    margin: 100px 20px;
 }
 
 .about-heading{
@@ -29,9 +30,11 @@ width: 100%;
     font-weight: 600;
     margin-left: 20px;
 }
+
 .food-imgs {
     position: relative;
     z-index: -1;
+    top: 130px;
 }
 
 
@@ -52,16 +55,41 @@ width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+    height: 114px;
+    /* flex-direction: column; */
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
 }
 
 .sub-img {
     width: 200px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
+.review-text{
+    flex: 1;
+    margin-top: 0;
+}
+
+.featured {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 @media only screen and (min-width: 768px){
+
+    .food-imgs {
+        top: 0;
+    }
+
+    .about{
+        margin: 20px 20px 100px 20px;
+    }
 
 .discover-button{
 width: auto;
@@ -73,9 +101,7 @@ width: auto;
     justify-content: center;
 }
 
-.featured {
-    flex: 1;
-}
+
 
 .about-heading {
     font-size: 3.125rem;
