@@ -1,33 +1,30 @@
-<ul>
-    <li>
-        <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
-        <h3>{{subscriptionDetails[0]?.name}}</h3>
-        <!-- hook up stars with rating logic -->
+<div class="container">
+    <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
+    <h3>{{subscriptionDetails[0]?.name}}</h3>
+    <!-- hook up stars with rating logic -->
+    <div class="stars">
+        <i *ngFor="let star of [].constructor(rating)" class="fas fa-star small"></i>
+        <i *ngFor="let star of [].constructor(5 - rating)" class="far fa-star small"></i>
+        <!-- //runtime error INvalid ARray length??? -->
+    </div>
+    <p>{{subscriptionDetails[0]?.description}}</p>
+    <p>Average Cost: {{averageCost | currency}} </p>
+    <button (click)="routeWriteReviews(subscriptionDetails[0].sub_id)">Write a Review</button>
+    <div class="box">
+        <!-- use feature review component here?  -->
         <div class="stars">
-            <i *ngFor="let star of [].constructor(rating)" class="fas fa-star small"></i>
-            <i *ngFor="let star of [].constructor(5 - rating)" class="far fa-star small"></i>
-            <!-- //runtime error INvalid ARray length??? -->
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
         </div>
-        <p>{{subscriptionDetails[0]?.description}}</p>
-        <p>Average Cost: {{averageCost | currency}} </p>
-        <button (click)="routeWriteReviews(subscriptionDetails[0].sub_id)">Write a Review</button>
-        <div class="box">
-            <!-- use feature review component here?  -->
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <!-- hook logic for rating to stars -->
-            <div>
-                <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
-                <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
-                <p>{{subscriptionDetails[0]?.review}}</p>
-                <button class="secondary" (click)="routeReviews(subscriptionDetails[0].sub_id)">View All
-                    Reviews</button>
-            </div>
-        </div>
-    </li>
-</ul>
+        <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
+        <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
+        <p>{{subscriptionDetails[0]?.review}}</p>
+        <button class="secondary" (click)="routeReviews(subscriptionDetails[0].sub_id)">View All
+            Reviews</button>
+    </div>
+</div>
+
+<!-- hook logic for rating to stars -->
