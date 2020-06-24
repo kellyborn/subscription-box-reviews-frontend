@@ -34,6 +34,8 @@ export class FeatureReviewComponent implements OnInit {
   getFeaturedReviews(type: string) {
     this.service.getFeatureReview(type).subscribe((response) => {
       this.findTopRating(response);
+      console.log("Do we have img urls?")
+      console.log(response)
     });
   };
 
