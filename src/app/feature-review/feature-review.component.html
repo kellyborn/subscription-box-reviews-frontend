@@ -14,7 +14,7 @@
         <ul class="reviews">
             <li *ngFor="let topReview of topReviews" class="featured box" (click)="routeDetails(topReview.sub_id)">
                 <!-- Add logo -->
-                <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
+                <img class="sub-img" src={{topReview?.sub_logo}} />
                 <!-- hook up star functionality -->
                 <div class="stars">
                     <i *ngFor="let star of [].constructor(topReview.rating)" class="fas fa-star small"></i>
