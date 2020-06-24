@@ -1,23 +1,24 @@
 <div class="header">
     <i (click)=toggleDisplay() class="fas fa-bars"></i>
-    <a routerLink="/home" class="logo">Logo</a>
+    <!-- <img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"> -->
+    <a routerLink="/home" class="logo"><img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"></a>
 </div>
 <div>
     <ul *ngIf="!isShow" class="nav-links">
-        <li><a routerLink="/subscriptions">All</a></li>
-        <li><a (click)="route('meat')">Meat</a></li>
-        <li><a (click)="route('veggies')">Veggies</a></li>
-        <li><a (click)="route('mealprep')">Meal Prep</a></li>
+        <li><a routerLink="/subscriptions">All Boxes</a></li>
+        <li><a (click)="route('meat')">Meat Boxes</a></li>
+        <li><a (click)="route('veggies')">Veggie Boxes</a></li>
+        <li><a (click)="route('mealprep')">Meal Prep Boxes</a></li>
     </ul>
 </div>
 
 <div class="desktop-header">
-    <a routerLink="/home" class="logo">Logo</a>
+    <a routerLink="/home" class="logo"><img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"></a>
     <ul class="desktop-links">
-        <li><a routerLink="/subscriptions">All</a></li>
-        <li><a (click)="route('meat')">Meat</a></li>
-        <li><a (click)="route('veggies')">Veggies</a></li>
-        <li><a (click)="route('mealprep')">Meal Prep</a></li>
+        <li><a routerLink="/subscriptions">All Boxes</a></li>
+        <li><a (click)="route('meat')">Meat Boxes</a></li>
+        <li><a (click)="route('veggies')">Veggie Boxes</a></li>
+        <li><a (click)="route('mealprep')">Meal Prep Boxes</a></li>
     </ul>
 
 </div>

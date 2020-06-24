@@ -37,6 +37,9 @@ p, label {
 
 a{
     text-decoration: none;
+    font-size: 1.125rem;
+    color: #323333;
+    cursor: pointer;
 }
 
 .bold-heading {
@@ -59,6 +62,7 @@ button{
     letter-spacing: 1px;
     height: 44px;
     width: 100%;
+    cursor: pointer;
 }
 
 .secondary {
@@ -66,6 +70,7 @@ button{
     border: 1px solid #880AAC;
     color: #880AAC;
     text-align: center;
+    cursor: pointer;
 }
 
 
