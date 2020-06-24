@@ -55,6 +55,7 @@ export class SubscriptionsComponent implements OnInit {
   getAllSubs() {
     this.service.getAllSubs().subscribe(response => {
       this.subscriptions = response;
+      console.log(response)
     })
   }
 
