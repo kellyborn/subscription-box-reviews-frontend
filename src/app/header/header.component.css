@@ -3,6 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .fas{
@@ -36,9 +43,15 @@ li{
 
 @media only screen and (min-width: 768px){
 
+
 .header{
     display: none;
 }
+
+/* .logo{
+    display: none;
+} */
+
 
 .desktop-header{
     display: flex;

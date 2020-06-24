@@ -51,6 +51,17 @@
 
     .subscription{
         max-width: 300px;
+        max-height: 580px;
+        overflow-y: hidden;
+        
+    }
+
+    .description{
+        height:120px;
+        overflow: hidden;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        
     }
 
 }

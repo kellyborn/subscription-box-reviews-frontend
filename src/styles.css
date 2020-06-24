@@ -7,6 +7,10 @@ body, h1, h2, h3 {
 
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* Mobile Styles */
 
 /* .container{

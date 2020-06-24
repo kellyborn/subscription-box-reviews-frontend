@@ -23,7 +23,12 @@ export class HeaderComponent implements OnInit {
 
   route(where: string) {
     this.router.navigate(["/subscriptions"], { queryParams: { type: where } })
+    this.toggleDisplay();
   }
+  routeDesktop(where: string) {
+    this.router.navigate(["/subscriptions"], { queryParams: { type: where } })
+  }
+
 
 }
 
