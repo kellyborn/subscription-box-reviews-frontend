@@ -7,6 +7,12 @@ body, h1, h2, h3 {
 
 }
 
+/* Mobile Styles */
+
+/* .container{
+    min-width: 375px;
+} */
+
 h1 {
     font-size: 2.25rem;
 }
@@ -84,7 +90,6 @@ button{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid gray;
 }
 
 .card{
