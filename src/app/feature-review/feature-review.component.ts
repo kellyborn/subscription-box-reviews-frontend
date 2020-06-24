@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from '../subscription.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class FeatureReviewComponent implements OnInit {
   topReviews: any[] = [];
   categories: string[] = ['meat', 'veg', 'mealprep']
 
-  constructor(private service: SubscriptionService) { }
+  constructor(private service: SubscriptionService, private router: Router) { }
 
   ngOnInit(): void {
     for (let i = 0; i < this.categories.length; i++) {
@@ -35,4 +36,11 @@ export class FeatureReviewComponent implements OnInit {
       this.findTopRating(response);
     });
   };
+
+  routeDetails(id: number) {
+    console.log(id);
+    this.router.navigate(["/subdetails"], { queryParams: { id: id } })
+  }
+
+
 };

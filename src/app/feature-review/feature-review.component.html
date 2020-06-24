@@ -12,7 +12,7 @@
     <div class="featured-reviews">
         <h1 class="featured-heading">Featured Reviews</h1>
         <ul class="reviews">
-            <li *ngFor="let topReview of topReviews" class="featured box">
+            <li *ngFor="let topReview of topReviews" class="featured box" (click)="routeDetails(topReview.sub_id)">
                 <!-- Add logo -->
                 <img class="sub-img" src="https://i.imgur.com/XtoTolS.jpg" />
                 <!-- hook up star functionality -->
