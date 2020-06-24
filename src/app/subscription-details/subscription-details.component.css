@@ -1,7 +1,38 @@
+.box-detail-wrapper {
+    margin: 20px 20px 40px 20px;
+}
+
 .sub-img {
-    width: 300px;
+    /* width: 335px; */
+    height: 300px;
+    object-fit: cover;
+    
 }
 
 .small {
     font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px){
+
+    .box-detail-wrapper {
+        display: flex;
+        position: relative;
+        margin: 0px 0px 40px 20px;
+    }
+    
+    .sub-img {
+        display: absolute;
+        width: 360px;
+        flex: 1;
+        
+    }
+    
+    .details {
+        display: absolute;
+        flex: 3;
+        margin-left: 40px;
+    }
+
+
 }
