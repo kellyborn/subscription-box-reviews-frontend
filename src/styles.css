@@ -64,7 +64,7 @@ button{
     font-weight: 400;
     color: #FFFFFF;
     letter-spacing: 1px;
-    height: 44px;
+    padding: 12px;
     width: 100%;
     cursor: pointer;
 }

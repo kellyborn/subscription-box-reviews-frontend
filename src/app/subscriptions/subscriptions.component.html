@@ -4,12 +4,13 @@
     <img class="desktop-lgblob" src="../../assets/purp_blob_lg.svg" alt="large purple blob">
     <img class="desktop-pepper" src="../../assets/pepper.svg" alt="pepper">
     <img class="desktop-pear" src="../../assets/pear.svg" alt="pear">
-    <img class="desktop-carrots" src="../../assets/carrots.svg" alt="carrots">
+    <img class="desktop-salmon" src="../../assets/salmon.svg" alt="salmon">
+    <!-- <img class="desktop-carrots" src="../../assets/carrots.svg" alt="carrots"> -->
     <img class="desktop-lemon" src="../../assets/lemon.png" alt="lemon">
 
 </div>
 <div class="container">
-    <h2 *ngIf="subscriptions[0]?.sub_type === 'meat'">Meat Subscriptions</h2>
+    <h2 class="heading" *ngIf="subscriptions[0]?.sub_type === 'meat'">Meat Subscriptions</h2>
     <h2 *ngIf="subscriptions[0]?.sub_type === 'veg'">Veggie Subscriptions</h2>
     <h2 *ngIf="subscriptions[0]?.sub_type === 'mealprep'">Meal Prep Subscriptions</h2>
     <ul class="sub-boxes">

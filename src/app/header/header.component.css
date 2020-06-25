@@ -59,7 +59,7 @@ li{
     list-style: none;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 40px 40px 40px;
+    margin: 20px 40px 40px 40px;
 }
 
 .desktop-links{
@@ -67,7 +67,6 @@ li{
     flex-direction: row;
     list-style: none;
 }
-
 
 
 
