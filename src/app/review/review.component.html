@@ -2,12 +2,12 @@
     <form #addForm="ngForm" (ngSubmit)="addReview(addForm)">
         <h2 class="review-heading left">Write a Review</h2>
         <label class="bold-heading label" for="review_title">Review Title</label>
-        <input type="text" name="review_title" id="review_title" ngModel />
+        <input type="text" name="review_title" id="review_title" required ngModel />
         <label class="bold-heading label" for="review">Review</label>
-        <textarea name="review" id="review" ngModel></textarea>
+        <textarea name="review" id="review" required ngModel></textarea>
         <label class="bold-heading label" for="rating">Rating</label>
         <!-- STAR COMPONENT -->
-        <select name="rating" id="rating" ngModel>
+        <select name="rating" id="rating" required ngModel>
             <option value="" selected>Select Your Rating</option>
             <option value="1">1 Star</option>
             <option value="2">2 Star</option>
@@ -16,7 +16,7 @@
             <option value="5">5 Star</option>
         </select>
         <label class="bold-heading label" for="user_cost">Cost</label>
-        <input type="text" name="user_cost" id="user_cost" ngModel />
-        <button>Submit</button>
+        <input type="text" name="user_cost" id="user_cost" required ngModel />
+        <button [ngClass]="{disable: addForm.invalid}" [disabled]="addForm.invalid">Submit</button>
     </form>
 </div>
