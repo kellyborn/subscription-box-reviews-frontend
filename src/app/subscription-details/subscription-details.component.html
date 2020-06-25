@@ -16,12 +16,9 @@
     </div>
     <div class="box">
         <!-- use feature review component here?  -->
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div *ngIf="subscriptionDetails[0]?.rating" class="stars">
+            <i *ngFor="let star of [].constructor(subscriptionDetails[0]?.rating)" class="fas fa-star small"></i>
+            <i *ngFor="let star of [].constructor(5 - subscriptionDetails[0]?.rating)" class="far fa-star small"></i>
         </div>
         <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
         <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>

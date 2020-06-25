@@ -16,10 +16,10 @@
     <ul class="sub-boxes">
         <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
             <img class="sub-img" src={{subscription?.sub_img}} />
-            <!-- <div class="stars">
+            <div *ngIf="subscription.rating" class="stars">
                 <i *ngFor="let star of [].constructor(subscription.rating)" class="fas fa-star small"></i>
                 <i *ngFor="let star of [].constructor(5 - subscription.rating)" class="far fa-star small"></i>
-            </div> -->
+            </div>
             <p class="bold-heading">{{subscription.name}}</p>
             <p class="description">{{subscription.description}}</p>
             <button class="secondary card" (click)="routeDetails(subscription.sub_id)">View Subscription
