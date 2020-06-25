@@ -10,13 +10,13 @@
 
 </div>
 <div class="container">
-    <h2 class="heading" *ngIf="heading === 'all'">All Subscriptions</h2>
-    <h2 class="heading" *ngIf="heading === 'meat'">Meat Subscriptions
+    <h2 class="heading" *ngIf="heading === 'all'">All Boxes</h2>
+    <h2 class="heading" *ngIf="heading === 'meat'">Meat Boxes
     </h2>
-    <h2 class="heading" *ngIf="heading === 'veg'">Veggie Subscriptions
+    <h2 class="heading" *ngIf="heading === 'veg'">Veggie Boxes
     </h2>
     <h2 class="heading" *ngIf="heading === 'mealprep'">Meal Prep
-        Subscriptions</h2>
+        Boxes</h2>
     <ul class="sub-boxes">
         <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
             <img class="sub-img" src={{subscription?.sub_img}} />
@@ -26,7 +26,7 @@
             </div>
             <p class="bold-heading">{{subscription.name}}</p>
             <p class="description">{{subscription.description}}</p>
-            <button class="secondary card" (click)="routeDetails(subscription.sub_id)">View Subscription
+            <button class="secondary card" (click)="routeDetails(subscription.sub_id)">View Box
                 Details</button>
         </li>
     </ul>

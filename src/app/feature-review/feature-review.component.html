@@ -7,7 +7,7 @@
     <div class="about">
         <h1 class="about-heading">Discover. Subscribe. Review.</h1>
         <p class="subhead">Find home delivery subscriptions that fit your needs!</p>
-        <button class="discover-button" routerLink="/subscriptions">Discover Subscriptions</button>
+        <button class="discover-button" routerLink="/subscriptions">Discover The BestBox</button>
     </div>
     <div class="featured-reviews">
         <h2 class="featured-heading">Featured Reviews</h2>
@@ -22,7 +22,7 @@
                 </div>
                 <p class="bold-heading">{{topReview?.review_title}}</p>
                 <p class="review-text">{{topReview?.review}}</p>
-                <button class="secondary card" (click)="routeDetails(topReview.sub_id)">View Subscription
+                <button class="secondary card" (click)="routeDetails(topReview.sub_id)">View Box
                     Details</button>
             </li>
         </ul>
