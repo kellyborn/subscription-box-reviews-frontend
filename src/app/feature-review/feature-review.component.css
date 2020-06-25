@@ -79,7 +79,7 @@ width: 100%;
     flex-direction: column;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1010px){
 
     .food-imgs {
         top: 0;
