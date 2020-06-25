@@ -1,8 +1,10 @@
+<!-- Mobile Header -->
 <div class="header">
     <i (click)=toggleDisplay() class="fas fa-bars"></i>
     <!-- <img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"> -->
     <a routerLink="/home" class="logo"><img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"></a>
 </div>
+
 <div>
     <ul *ngIf="!isShow" class="nav-links">
         <li><a routerLink="/subscriptions">All Boxes</a></li>
@@ -12,6 +14,7 @@
     </ul>
 </div>
 
+<!-- Desktop Header -->
 <div class="desktop-header">
     <a routerLink="/home" class="desktop-logo"><img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"></a>
     <ul class="desktop-links">
