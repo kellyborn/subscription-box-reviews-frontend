@@ -9,8 +9,7 @@
 }
 
 .food-imgs {
-    position: relative;
-    z-index: -1;
+    display: none;
 }
 
 .desktop-pepper{
@@ -56,6 +55,13 @@
     .heading {
         margin-left: 70px;
     }  
+
+    
+    .food-imgs {
+    position: relative;
+    z-index: -1;
+    display: block;
+}
 
     .sub-boxes{
         display: flex;
