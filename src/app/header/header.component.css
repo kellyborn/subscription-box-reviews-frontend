@@ -35,6 +35,8 @@
     box-shadow: 0 2px 6px 1px rgba(149,148,148,0.50)
 }
 
+
+
 .desktop-links{
     display: none;
 }
@@ -73,6 +75,11 @@ li{
     display: flex;
     flex-direction: row;
     list-style: none;
+}
+
+.link:hover{
+        color: #880AAC;
+    
 }
 
 

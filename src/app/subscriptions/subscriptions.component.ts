@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SubscriptionsComponent implements OnInit {
   subscriptions: any[] = [];
   ratings: any[] = [];
+  heading: string = null;
 
   //active route to subscribe to query parameters
   constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
@@ -20,12 +21,16 @@ export class SubscriptionsComponent implements OnInit {
       console.log(response);
       if (response.type === 'meat') {
         this.getSubscription('meat');
+        this.heading = 'meat';
       } else if (response.type === 'veggies') {
         this.getSubscription('veg');
+        this.heading = 'veg';
       } else if (response.type === 'mealprep') {
         this.getSubscription('mealprep');
+        this.heading = 'mealprep';
       } else {
         this.getAllSubs();
+        this.heading = 'all';
       }
       // stretch add 404 page
     })
