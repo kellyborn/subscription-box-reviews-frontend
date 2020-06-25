@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SubscriptionService } from '../subscription.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-review',
@@ -12,7 +12,7 @@ export class ReviewComponent implements OnInit {
 
   id: any;
 
-  constructor(private service: SubscriptionService, private route: ActivatedRoute) { }
+  constructor(private service: SubscriptionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
@@ -24,7 +24,10 @@ export class ReviewComponent implements OnInit {
     let newReview = form.value;
     newReview.subscription_id = this.id;
     this.service.addReview(newReview).subscribe(() => {
-      form.reset();
+      console.log("THIS THIS POST?")
+      console.log(newReview)
+      this.router.navigate(["/subdetails"], { queryParams: { id: this.id } })
+      console.log("THIS THIS POST?")
     })
   }
 }
