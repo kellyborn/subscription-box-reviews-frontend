@@ -7,10 +7,10 @@
 
 <div>
     <ul *ngIf="!isShow" class="nav-links">
-        <li><a routerLink="/subscriptions">All Boxes</a></li>
-        <li><a (click)="route('meat')">Meat Boxes</a></li>
-        <li><a (click)="route('veggies')">Veggie Boxes</a></li>
-        <li><a (click)="route('mealprep')">Meal Prep Boxes</a></li>
+        <li class="mobile-link"><a (click)=toggleDisplay() routerLink="/subscriptions">All Boxes</a></li>
+        <li class="mobile-link"><a (click)="route('meat')">Meat Boxes</a></li>
+        <li class="mobile-link"><a (click)="route('veggies')">Veggie Boxes</a></li>
+        <li class="mobile-link"><a (click)="route('mealprep')">Meal Prep Boxes</a></li>
     </ul>
 </div>
 
