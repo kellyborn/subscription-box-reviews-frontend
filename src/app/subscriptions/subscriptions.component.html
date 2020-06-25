@@ -25,7 +25,7 @@
                 <i *ngFor="let star of [].constructor(5 - subscription.rating)" class="far fa-star small"></i>
             </div>
             <p class="bold-heading">{{subscription.name}}</p>
-            <p class="description">{{subscription.description}}</p>
+            <p class="description line-clamp">{{subscription.description}}</p>
             <button class="secondary card" (click)="routeDetails(subscription.sub_id)">View Box
                 Details</button>
         </li>

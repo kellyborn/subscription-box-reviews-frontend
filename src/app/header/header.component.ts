@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { report } from 'process';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -12,13 +12,11 @@ export class HeaderComponent implements OnInit {
 
   isShow = false;
   heading: string = null;
-  constructor(private router: Router, private homeRoute: ActivatedRoute) { }
+  constructor(private router: Router, private homeRoute: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     this.toggleDisplay();
-    this.homeRoute.fragment.subscribe((response) => {
-      console.log(response);
-    })
+    console.log(this.location.path());
     this.homeRoute.queryParams.subscribe(response => {
       console.log(response);
       if (response.type === 'meat') {
@@ -31,7 +29,9 @@ export class HeaderComponent implements OnInit {
         this.heading = 'all';
       }
     })
+
   }
+
 
   toggleDisplay() {
     this.isShow = !this.isShow;
