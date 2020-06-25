@@ -3,11 +3,9 @@
         <img class="sub-img" src={{subscriptionDetails[0]?.sub_img}} />
         <div class="details">
             <h3>{{subscriptionDetails[0]?.name}}</h3>
-            <!-- hook up stars with rating logic -->
-            <div class="stars">
+            <div *ngIf="rating" class="stars">
                 <i *ngFor="let star of [].constructor(rating)" class="fas fa-star small"></i>
                 <i *ngFor="let star of [].constructor(5 - rating)" class="far fa-star small"></i>
-                <!-- //runtime error INvalid ARray length??? -->
             </div>
             <p>{{subscriptionDetails[0]?.description}}</p>
             <p>Average Cost: {{averageCost | currency}} </p>
@@ -15,7 +13,6 @@
         </div>
     </div>
     <div class="box">
-        <!-- use feature review component here?  -->
         <div *ngIf="subscriptionDetails[0]?.rating" class="stars">
             <i *ngFor="let star of [].constructor(subscriptionDetails[0]?.rating)" class="fas fa-star small"></i>
             <i *ngFor="let star of [].constructor(5 - subscriptionDetails[0]?.rating)" class="far fa-star small"></i>
@@ -27,5 +24,3 @@
             Reviews</button>
     </div>
 </div>
-
-<!-- hook logic for rating to stars -->

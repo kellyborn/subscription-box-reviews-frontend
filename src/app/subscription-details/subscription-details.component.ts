@@ -26,8 +26,6 @@ export class SubscriptionDetailsComponent implements OnInit {
   getAvgRating(id: any) {
     this.service.getSubscriptionRatingAvg(id).subscribe(response => {
       this.rating = Number(response[0].round);
-      console.log("what is the response?????")
-      console.log(this.rating)
     })
   }
 
@@ -39,19 +37,15 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   getSubscriptionDetailsAvg(id: any) {
     this.service.getSubscriptionDetailsAvg(id).subscribe(response => {
-      console.log(response[0].avg)
       this.averageCost = Number(response[0].avg);
-      console.log(this.averageCost)
     })
   };
 
   routeReviews(id: number) {
-    console.log(id);
     this.router.navigate(["/subscription-reviews"], { queryParams: { id: id } })
   }
 
   routeWriteReviews(id: number) {
-    console.log(id);
     this.router.navigate(["/write-reviews"], { queryParams: { id: id } })
   }
 
