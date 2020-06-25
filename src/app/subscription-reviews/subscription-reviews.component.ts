@@ -15,7 +15,6 @@ export class SubscriptionReviewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      console.log(response);
       this.getSubscriptionReviews(response.id);
     })
   }
@@ -23,12 +22,10 @@ export class SubscriptionReviewsComponent implements OnInit {
   getSubscriptionReviews(id: any) {
     this.service.getSubscriptionDetails(id).subscribe(response => {
       this.subscriptionReviews = response;
-      console.log(this.subscriptionReviews);
     })
   };
 
   routeWriteReviews(id: number) {
-    console.log(id);
     this.router.navigate(["/write-reviews"], { queryParams: { id: id } })
   }
 }

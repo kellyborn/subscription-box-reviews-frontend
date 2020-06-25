@@ -18,7 +18,6 @@ export class SubscriptionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      console.log(response);
       if (response.type === 'meat') {
         this.getSubscription('meat');
         this.heading = 'meat';
@@ -32,18 +31,11 @@ export class SubscriptionsComponent implements OnInit {
         this.getAllSubs();
         this.heading = 'all';
       }
-      // stretch add 404 page
     })
   }
 
-  // ngAfterViewInit() {
-  //   console.log("Testing after view")
-  //   this.getAllSubs();
-  // }
-
   //when View Subscription Details BUTTON is clicked we need to go to the details page and show the details of that box
   routeDetails(id: number) {
-    console.log(id);
     this.router.navigate(["/subdetails"], { queryParams: { id: id } })
   }
 
@@ -74,7 +66,6 @@ export class SubscriptionsComponent implements OnInit {
           this.subscriptions.push(ratingObj);
         });
       })
-      console.log(response)
     })
   }
 
