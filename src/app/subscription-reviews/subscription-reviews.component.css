@@ -1,10 +1,20 @@
-/* .review-container{
+.review-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-} */
+}
 
 .write-button{
     margin: 20px;
+    width: auto;
 }
 
+.all-reviews{
+    margin-left: 40px;
+}
+
+@media only screen and (min-width: 768px){
+    .review-container{
+        display: block;
+    }
+
+}
