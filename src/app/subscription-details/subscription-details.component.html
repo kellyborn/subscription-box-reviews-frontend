@@ -2,23 +2,22 @@
     <div class="box-detail-wrapper">
         <img class="sub-img" src={{subscriptionDetails[0]?.sub_img}} />
         <div class="details">
-            <h3>{{subscriptionDetails[0]?.name}}</h3>
+            <h3 class="subdetail-name">{{subscriptionDetails[0]?.name}}</h3>
             <div *ngIf="rating" class="stars">
                 <i *ngFor="let star of [].constructor(rating)" class="fas fa-star small"></i>
                 <i *ngFor="let star of [].constructor(5 - rating)" class="far fa-star small"></i>
             </div>
             <p>{{subscriptionDetails[0]?.description}}</p>
-            <p>Average Cost: {{averageCost | currency}} </p>
+            <p class="bold-heading">Average User Cost: {{averageCost | currency}} </p>
             <button (click)="routeWriteReviews(subscriptionDetails[0].sub_id)">Write a Review</button>
         </div>
     </div>
     <div class="box">
         <div *ngIf="subscriptionDetails[0]?.rating" class="stars">
-            <i *ngFor="let star of [].constructor(subscriptionDetails[0]?.rating)" class="fas fa-star small"></i>
-            <i *ngFor="let star of [].constructor(5 - subscriptionDetails[0]?.rating)" class="far fa-star small"></i>
+            <i *ngFor="let star of [].constructor(subscriptionDetails[0]?.rating)" class="fas fa-star"></i>
+            <i *ngFor="let star of [].constructor(5 - subscriptionDetails[0]?.rating)" class="far fa-star"></i>
         </div>
-        <p>Featured Review Rating: {{subscriptionDetails[0]?.rating}}</p>
-        <p class="review-header">Featured Review Title: {{subscriptionDetails[0]?.review_title}}</p>
+        <p class="review-header">{{subscriptionDetails[0]?.review_title}}</p>
         <p>{{subscriptionDetails[0]?.review}}</p>
         <button class="secondary" (click)="routeReviews(subscriptionDetails[0].sub_id)">View All
             Reviews</button>

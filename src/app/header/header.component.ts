@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { report } from 'process';
 
 
 @Component({
@@ -10,11 +11,26 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   isShow = false;
-
-  constructor(private router: Router) { }
+  heading: string = null;
+  constructor(private router: Router, private homeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.toggleDisplay();
+    this.homeRoute.fragment.subscribe((response) => {
+      console.log(response);
+    })
+    this.homeRoute.queryParams.subscribe(response => {
+      console.log(response);
+      if (response.type === 'meat') {
+        this.heading = 'meat';
+      } else if (response.type === 'veggies') {
+        this.heading = 'veg';
+      } else if (response.type === 'mealprep') {
+        this.heading = 'mealprep';
+      } else if (!response.type) {
+        this.heading = 'all';
+      }
+    })
   }
 
   toggleDisplay() {
@@ -28,6 +44,7 @@ export class HeaderComponent implements OnInit {
   routeDesktop(where: string) {
     this.router.navigate(["/subscriptions"], { queryParams: { type: where } })
   }
+
 
 
 }

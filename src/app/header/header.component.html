@@ -18,10 +18,13 @@
 <div class="desktop-header">
     <a routerLink="/home" class="desktop-logo"><img src="../../assets/bestbox_logo.svg" alt="BestBox Logo"></a>
     <ul class="desktop-links">
-        <li><a class="link" routerLink="/subscriptions">All Boxes</a></li>
-        <li><a class="link" (click)="routeDesktop('meat')">Meat Boxes</a></li>
-        <li><a class="link" (click)="routeDesktop('veggies')">Veggie Boxes</a></li>
-        <li><a class="link" (click)="routeDesktop('mealprep')">Meal Prep Boxes</a></li>
+        <li><a class="link" routerLink="/subscriptions" [ngClass]="{underline: heading === 'all'}">All Boxes</a></li>
+        <li><a class="link" (click)="routeDesktop('meat')" [ngClass]="{underline: heading === 'meat'}">Meat Boxes</a>
+        </li>
+        <li><a class=" link" (click)="routeDesktop('veggies')" [ngClass]="{underline: heading === 'veg'}">Veggie
+                Boxes</a></li>
+        <li><a class=" link" (click)="routeDesktop('mealprep')" [ngClass]="{underline: heading === 'mealprep'}">Meal
+                Prep Boxes</a></li>
     </ul>
 
 </div>

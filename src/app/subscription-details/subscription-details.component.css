@@ -8,12 +8,20 @@
     max-width: 100%;
 }
 
+.subdetail-name{
+    padding-top: 20px;
+
+}
+
 .small {
     font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 768px){
-
+    .subdetail-name{
+        padding-top: 0;
+    
+    }
     .box-detail-wrapper {
         display: flex;
         position: relative;
