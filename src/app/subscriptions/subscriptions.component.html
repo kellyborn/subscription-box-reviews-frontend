@@ -10,9 +10,13 @@
 
 </div>
 <div class="container">
-    <h2 class="heading" *ngIf="subscriptions[0]?.sub_type === 'meat'">Meat Subscriptions</h2>
-    <h2 class="heading" *ngIf="subscriptions[0]?.sub_type === 'veg'">Veggie Subscriptions</h2>
-    <h2 class="heading" *ngIf="subscriptions[0]?.sub_type === 'mealprep'">Meal Prep Subscriptions</h2>
+    <h2 class="heading" *ngIf="heading === 'all'">All Subscriptions</h2>
+    <h2 class="heading" *ngIf="heading === 'meat'">Meat Subscriptions
+    </h2>
+    <h2 class="heading" *ngIf="heading === 'veg'">Veggie Subscriptions
+    </h2>
+    <h2 class="heading" *ngIf="heading === 'mealprep'">Meal Prep
+        Subscriptions</h2>
     <ul class="sub-boxes">
         <li *ngFor="let subscription of subscriptions, index as i" class="subscription box">
             <img class="sub-img" src={{subscription?.sub_img}} />
