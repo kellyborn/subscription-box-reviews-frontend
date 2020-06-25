@@ -3,9 +3,9 @@
 }
 
 .sub-img {
-    width: 300px;
     height: 300px;
     object-fit: cover;
+    width: 100%;
 }
 
 .food-imgs {
@@ -29,7 +29,6 @@
     position: absolute;
     right: -100px;
     top: 400px;
-    /* flex: 1; */
 }
 
 .desktop-pear {
@@ -44,12 +43,6 @@
     top: 2300px;
 }
 
-/* .desktop-carrots{
-    position: absolute;
-    left: -100px;
-    top: 1600px;
-} */
-
 @media only screen and (min-width: 768px){
 
     .heading {
@@ -61,7 +54,7 @@
     position: relative;
     z-index: -1;
     display: block;
-}
+    }
 
     .sub-boxes{
         display: flex;
