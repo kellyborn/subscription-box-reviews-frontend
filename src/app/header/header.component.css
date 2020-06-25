@@ -73,11 +73,6 @@ li{
     display: none;
 }
 
-/* .logo{
-    display: none;
-} */
-
-
 .desktop-header{
     display: flex;
     flex-direction: row;

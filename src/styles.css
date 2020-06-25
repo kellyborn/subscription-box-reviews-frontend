@@ -113,4 +113,9 @@ button{
 width: unset;
 }
 
+.secondary:hover{
+    border: 1px solid #f97809;
+    color: #f97809;
+}
+
 }

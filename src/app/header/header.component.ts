@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-
 
 @Component({
   selector: 'app-header',
@@ -12,13 +10,11 @@ export class HeaderComponent implements OnInit {
 
   isShow = false;
   heading: string = null;
-  constructor(private router: Router, private homeRoute: ActivatedRoute, private location: Location) { }
+  constructor(private router: Router, private homeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.toggleDisplay();
-    console.log(this.location.path());
     this.homeRoute.queryParams.subscribe(response => {
-      console.log(response);
       if (response.type === 'meat') {
         this.heading = 'meat';
       } else if (response.type === 'veggies') {
@@ -29,9 +25,12 @@ export class HeaderComponent implements OnInit {
         this.heading = 'all';
       }
     })
-
+    this.homeRoute.url.subscribe(response => {
+      if (response[0].path === 'home') {
+        this.heading = null;
+      }
+    })
   }
-
 
   toggleDisplay() {
     this.isShow = !this.isShow;

@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container">
     <form #addForm="ngForm" (ngSubmit)="addReview(addForm)">
         <h2 class="review-heading left">Write a Review</h2>
@@ -6,7 +7,6 @@
         <label class="bold-heading label" for="review">Review</label>
         <textarea name="review" id="review" required ngModel></textarea>
         <label class="bold-heading label" for="rating">Rating</label>
-        <!-- STAR COMPONENT -->
         <select name="rating" id="rating" required ngModel>
             <option value="" selected>Select Your Rating</option>
             <option value="1">1 Star</option>
