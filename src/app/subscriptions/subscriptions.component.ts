@@ -31,6 +31,11 @@ export class SubscriptionsComponent implements OnInit {
     })
   }
 
+  // ngAfterViewInit() {
+  //   console.log("Testing after view")
+  //   this.getAllSubs();
+  // }
+
   //when View Subscription Details BUTTON is clicked we need to go to the details page and show the details of that box
   routeDetails(id: number) {
     console.log(id);
@@ -55,6 +60,15 @@ export class SubscriptionsComponent implements OnInit {
   getAllSubs() {
     this.service.getAllSubs().subscribe(response => {
       this.subscriptions = response;
+      this.subscriptions.forEach((item) => {
+        this.service.getSubscriptionRatingAvg(item.sub_id).subscribe(response2 => {
+          let ratingObj = item
+          if (response2[0].round !== undefined) {
+            ratingObj.rating = Number(response2[0].round);
+          }
+          this.subscriptions.push(ratingObj);
+        });
+      })
       console.log(response)
     })
   }
