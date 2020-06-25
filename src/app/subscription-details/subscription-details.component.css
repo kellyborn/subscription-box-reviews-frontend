@@ -3,10 +3,9 @@
 }
 
 .sub-img {
-    /* width: 335px; */
     height: 300px;
     object-fit: cover;
-    
+    max-width: 100%;
 }
 
 .small {
